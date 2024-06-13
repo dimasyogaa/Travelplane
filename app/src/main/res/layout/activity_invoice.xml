@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    android:scrollbars="none"
+    tools:context=".activity.InvoiceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="36dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/bg_blue_rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/invoice_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"
+            android:minHeight="?android:attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/mbold"
+                android:text="@string/title_invoice_ticket"
+                android:textColor="@color/white_primary"
+                android:textSize="18sp" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/bg_invoice_white"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invoice_toolbar">
+
+
+            <RelativeLayout
+                android:id="@+id/linear_invoice_airline_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/iv_invoice_logo_airline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/image"
+                        tools:background="@drawable/ic_batik_air" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_airline_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mregular"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Batik Air" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_qr_code" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_invoice_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:weightSum="2"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_invoice_airline_name">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/mlight"
+                        android:padding="8dp"
+                        android:text="@string/title_name"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/mmedium"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Yoga Dimas" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/mlight"
+                        android:padding="8dp"
+                        android:text="@string/title_cabin_class"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_airline_cabin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/mmedium"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="First" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="?attr/colorTextHint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_invoice_top" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_line2">
+
+                <TextView
+                    android:id="@+id/tv_invoice_round_trip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mmedium"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/roundtrip"
+                    android:textColor="?attr/colorTextHint"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mlight"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="@string/title_from"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_invoice_airport_departure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mmedium"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        tools:text="Halim Perdanakusuma (JAKARTA)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_invoice_date_departure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:paddingStart="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="departure date" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_time_departure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:gravity="end"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="departure time" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mlight"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/title_to"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_invoice_airport_return"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mmedium"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        tools:text="Ahmad Yani (Semarang)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_invoice_date_return"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:paddingStart="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="return date" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_time_return"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:gravity="end"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="return time" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_time_travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mlight"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/title_invoice_estimated_travel_time"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_invoice_time_travel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mregular"
+                        android:padding="8dp"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="1 Hour 2 Minutes" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="?attr/colorTextHint" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_invoice_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/mregular"
+                                android:padding="8dp"
+                                android:text="@string/airline_price"
+                                android:textColor="?attr/colorOnSecondary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_invoice_airline_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/mmedium"
+                                android:gravity="end"
+                                android:padding="8dp"
+                                android:textColor="?attr/colorOnSecondary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:text="Rp1000000" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/mregular"
+                                android:padding="8dp"
+                                android:text="@string/title_discount"
+                                android:textColor="?attr/colorOnSecondary"
+                                android:textSize="16sp" />
+
+
+                            <TextView
+                                android:id="@+id/tv_invoice_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/mmedium"
+                                android:gravity="end"
+                                android:padding="8dp"
+                                android:textColor="?attr/colorOnSecondary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:text="10 %" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mregular"
+                            android:padding="8dp"
+                            android:text="@string/title_total"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="Rp900000" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/tv_invoice_payment_method"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:padding="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            tools:text="payment method" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_account_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/mmedium"
+                            android:gravity="end"
+                            android:padding="8dp"
+                            android:textColor="?attr/colorOnSecondary"
+                            android:textSize="14sp"
+                            tools:text="account number" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorTextHint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_invoice" />
+
+            <ToggleButton
+                android:id="@+id/btn_invoice_detail"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="@font/mbold"
+                android:textColor="?attr/colorOnPrimary"
+                android:textOff="@string/invoice_see_details"
+                android:textOn="@string/invoice_close_details"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_line4" />
+
+            <ImageView
+                android:id="@+id/iv_barcode"
+                android:layout_width="190dp"
+                android:layout_height="78dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_bar_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_invoice_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/number_barcode"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_barcode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

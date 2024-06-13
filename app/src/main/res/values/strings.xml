@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Travelplane</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="title_name">Name</string>
+    <string name="hint_passenger_name">Passenger name</string>
+    <string name="title_from">From</string>
+    <string name="hint_select_departure_airport">Select departure airport</string>
+    <string name="title_travelplane">TRAVELPLANE</string>
+    <string name="image">image</string>
+    <string name="title_to">To</string>
+    <string name="hint_select_destination_airport">Select destination airport</string>
+    <string name="title_airlines">Airlines</string>
+    <string name="hint_choose_an_airline">Choose an airline</string>
+    <string name="title_cabin_class">Cabin Class</string>
+    <string name="hint_choose_cabin_class">Choose cabin class</string>
+    <string name="title_departure">Departure</string>
+    <string name="hint_set_departure_date">Set departure date</string>
+    <string name="title_roundtrip">Roundtrip ?</string>
+    <string name="title_return">Return</string>
+    <string name="hint_set_a_return_date">Set a return date</string>
+    <string name="title_payment_method">Payment Method</string>
+    <string name="hint_choose_payment_method">Choose payment method</string>
+    <string name="title_buy_ticket">Buy Ticket</string>
+    <string name="state_switch_off">Off</string>
+    <string name="state_switch_on">On</string>
+    <string name="format_date">EEE, dd MMM YYYY</string>
+    <string name="cabin_class_economy">Economy</string>
+    <string name="cabin_class_economy_premium">Economy Premium</string>
+    <string name="cabin_class_business">Business</string>
+    <string name="cabin_class_first">First</string>
+    <string name="roundtrip">Roundtrip</string>
+    <string name="title_discount">Discount</string>
+    <string name="title_total">Total</string>
+    <string name="airline_price">Airline Price</string>
+    <string name="invoice_see_details">See Details</string>
+    <string name="invoice_close_details">Close Details</string>
+    <string name="number_barcode">1234567890</string>
+    <string name="title_invoice_ticket">TICKET</string>
+    <string name="title_invoice_estimated_travel_time">Estimated travel time</string>
+    <string name="time_travel_15_minutes">15 Minutes</string>
+    <string name="time_travel_1_hour_10_minutes">1 Hour 10 Minutes</string>
+    <string name="time_travel_1_hour_30_minutes">1 Hour 30 Minutes</string>
+    <string name="time_travel_1_hour">1 Hour</string>
+    <string name="time_travel_1_hour_25_minutes">1 Hour 25 Minutes</string>
+    <string name="time_travel_30_minutes">30 Minutes</string>
+    <string name="toast_empty_input">There are still inputs that need to be filled</string>
+    <string name="title_team_us">Team us</string>
+    <string name="title_information">Information</string>
+    <string name="title_language">Language</string>
+    <string name="team_us_teknik_informatika">Informatics Engineering</string>
+    <string name="information_desc">A simple application about selling air tickets</string>
+    <string name="toast_empty_departure_date">Set the departure date in advance</string>
+
+    <string-array name="airport">
+        <item>Soekarno-Hatta (TANGERANG)</item>
+        <item>Halim Perdanakusuma (JAKARTA)</item>
+        <item>Ahmad Yani (SEMARANG)</item>
+        <item>Juanda (SIDOARJO)</item>
+
+    </string-array>
+
+    <string-array name="airlines">
+        <item>Pelita Air</item>
+        <item>Batik Air</item>
+        <item>Citilink</item>
+        <item>Lion Air</item>
+    </string-array>
+
+    <string-array name="cabin">
+        <item>@string/cabin_class_economy</item>
+        <item>@string/cabin_class_economy_premium</item>
+        <item>@string/cabin_class_business</item>
+        <item>@string/cabin_class_first</item>
+    </string-array>
+
+    <string-array name="payment">
+        <item>Bank BCA</item>
+        <item>Bank Mandiri</item>
+        <item>Bank BNI</item>
+        <item>Bank BRI</item>
+    </string-array>
+</resources>

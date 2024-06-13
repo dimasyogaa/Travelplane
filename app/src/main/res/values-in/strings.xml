@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Travelplane</string>
+    <string name="cancel">BATAL</string>
+    <string name="title_name">Nama</string>
+    <string name="hint_passenger_name">Nama penumpang</string>
+    <string name="title_from">Dari</string>
+    <string name="hint_select_departure_airport">Pilih bandara keberangkatan</string>
+    <string name="title_travelplane">TRAVELPLANE</string>
+    <string name="image">image</string>
+    <string name="title_to">Ke</string>
+    <string name="hint_select_destination_airport">Pilih bandara tujuan</string>
+    <string name="title_airlines">Maskapai</string>
+    <string name="hint_choose_an_airline">Pilih maskapai penerbangan</string>
+    <string name="title_cabin_class">Kelas Kabin</string>
+    <string name="hint_choose_cabin_class">Pilih kelas kabin</string>
+    <string name="title_departure">Berangkat</string>
+    <string name="hint_set_departure_date">Tetapkan tanggal keberangkatan</string>
+    <string name="title_roundtrip">Pulang - Pergi ?</string>
+    <string name="title_return">Pulang</string>
+    <string name="hint_set_a_return_date">Tetapkan tanggal kepulangan</string>
+    <string name="title_payment_method">Metode Pembayaran</string>
+    <string name="hint_choose_payment_method">Pilih metode pembayaran</string>
+    <string name="title_buy_ticket">Beli Tiket</string>
+    <string name="state_switch_off">Off</string>
+    <string name="state_switch_on">On</string>
+    <string name="format_date">EEE, dd MMM YYYY</string>
+    <string name="cabin_class_economy">Ekonomi</string>
+    <string name="cabin_class_economy_premium">Ekonomi Premium</string>
+    <string name="cabin_class_business">Bisnis</string>
+    <string name="cabin_class_first">First</string>
+    <string name="roundtrip">Pulang - Pergi</string>
+    <string name="title_discount">Diskon</string>
+    <string name="title_total">Total</string>
+    <string name="airline_price">Harga Maskapai</string>
+    <string name="invoice_see_details">Lihat Rincian</string>
+    <string name="invoice_close_details">Tutup Rincian</string>
+    <string name="number_barcode">1234567890</string>
+    <string name="title_invoice_ticket">TIKET</string>
+    <string name="title_invoice_estimated_travel_time">Perkiraan waktu perjalanan</string>
+    <string name="time_travel_15_minutes">15 Menit</string>
+    <string name="time_travel_1_hour_10_minutes">1 Jam 10 Menit</string>
+    <string name="time_travel_1_hour_30_minutes">1 Jam 30 Menit</string>
+    <string name="time_travel_1_hour">1 Jam</string>
+    <string name="time_travel_1_hour_25_minutes">1 Jam 25 Menit</string>
+    <string name="time_travel_30_minutes">30 Menit</string>
+    <string name="toast_empty_input">Masih ada input yang harus diisi</string>
+    <string name="title_team_us">Tentang kami</string>
+    <string name="title_information">Informasi</string>
+    <string name="title_language">Bahasa</string>
+    <string name="team_us_teknik_informatika">Teknik Informatika</string>
+    <string name="information_desc">Aplikasi sederhana tentang penjualan tiket pesawat</string>
+    <string name="toast_empty_departure_date">Atur tanggal keberangkatan terlebih dahulu</string>
+
+</resources>
